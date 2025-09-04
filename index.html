@@ -1,87 +1,23 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Clinical Expert Review</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <h1>Clinical Expert Review</h1>
-        <div class="right">
-          <label class="endpoint-label">Backend endpoint:
-            <input id="endpointInput" type="url" placeholder="Paste your Apps Script Web App URL" />
-          </label>
-          <button id="saveEndpointBtn" class="btn small">Save</button>
-        </div>
-      </div>
-    </header>
-
-    <main class="container">
-      <section id="patientNav" class="nav">
-        <button id="prevBtn" class="btn">&larr; Back</button>
-        <div id="position" class="position"></div>
-        <button id="nextBtn" class="btn">Next &rarr;</button>
-      </section>
-
-      <section id="patientCard" class="card">
-        <h2 id="patientTitle">Patient</h2>
-        <div id="patientTableWrap"></div>
-      </section>
-
-      <section id="expertInputs" class="card">
-        <h3>Provide your expert assessment</h3>
-
-        <div class="field">
-          <label for="outcome">Surgical outcome (&gt;1 MCID improvement):</label>
-          <select id="outcome">
-            <option value="">-- Select --</option>
-            <option value="0">0 : Unsuccessful Surgery</option>
-            <option value="1">1 : Successful Surgery</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>How confident are you in this prediction?</label>
-          <div class="choices" id="confidenceChoices">
-            <label><input type="radio" name="confidence" value="Very confident" /> Very confident</label>
-            <label><input type="radio" name="confidence" value="Somewhat confident" /> Somewhat confident</label>
-            <label><input type="radio" name="confidence" value="Neutral" /> Neutral</label>
-            <label><input type="radio" name="confidence" value="Somewhat unsure" /> Somewhat unsure</label>
-            <label><input type="radio" name="confidence" value="Not at all confident" /> Not at all confident</label>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="snotSlider">Estimate postop SNOT22 (0–110):</label>
-          <input id="snotSlider" type="range" min="0" max="110" step="1" value="55" />
-          <output id="snotValue">55</output>
-        </div>
-
-        <div class="actions">
-          <label class="small"><input type="checkbox" id="allowResubmit" /> Allow re‑submit for this patient</label>
-          <button id="saveSubmitBtn" class="btn primary">Save & Next</button>
-        </div>
-
-        <div id="status" class="status"></div>
-      </section>
-
-      <section class="card muted">
-        <details>
-          <summary>About</summary>
-          <p>This static web app (GitHub Pages) loads a CSV of patients and collects expert inputs for three final fields. Submissions are sent to a free Google Apps Script endpoint that appends to a Google Sheet. You can download that sheet as CSV anytime.</p>
-        </details>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <small>© Clinical Expert Review</small>
-      </div>
-    </footer>
-
-    <script src="app.js"></script>
-  </body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clinical Expert Review</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="site-header"><div class="container"><h1>Clinical Expert Review</h1></div></header>
+<main class="container">
+<section id="patientNav" class="nav"><button id="prevBtn" class="btn">&larr; Back</button><div id="position" class="position"></div><button id="nextBtn" class="btn">Next &rarr;</button></section>
+<section id="patientCard" class="card"><h2 id="patientTitle">Patient</h2><div id="patientTableWrap"></div></section>
+<section id="expertInputs" class="card"><h3>Provide your expert assessment</h3>
+<div class="field"><label for="outcome">Surgical outcome (&gt;1 MCID improvement):</label>
+<select id="outcome"><option value="">-- Select --</option><option value="0">0 : Unsuccessful Surgery</option><option value="1">1 : Successful Surgery</option></select></div>
+<div class="field"><label>How confident are you in this prediction?</label><div class="choices" id="confidenceChoices">
+<label><input type="radio" name="confidence" value="Very confident" /> Very confident</label>
+<label><input type="radio" name="confidence" value="Somewhat confident" /> Somewhat confident</label>
+<label><input type="radio" name="confidence" value="Neutral" /> Neutral</label>
+<label><input type="radio" name="confidence" value="Somewhat unsure" /> Somewhat unsure</label>
+<label><input type="radio" name="confidence" value="Not at all confident" /> Not at all confident</label>
+</div></div>
+<div class="field"><label for="snotSlider">Estimate postop SNOT22 (0–110):</label><input id="snotSlider" type="range" min="0" max="110" step="1" value="55" /><output id="snotValue">55</output></div>
+<div class="actions"><label class="small"><input type="checkbox" id="allowResubmit" /> Allow re‑submit for this patient</label><button id="saveSubmitBtn" class="btn primary">Save & Next</button></div>
+<div id="status" class="status"></div></section></main>
+<footer class="site-footer"><div class="container"><small>© Clinical Expert Review</small></div></footer>
+<script src="app.js"></script></body></html>

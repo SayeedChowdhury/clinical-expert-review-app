@@ -1,4 +1,4 @@
-const ENDPOINT='https://script.google.com/macros/s/AKfycbw7O12TTWqHzWTNdopBV-RHKCu18KjBd9JmIN1t2oXtzY8auCrAv2UdgyZy9JalK7V_Hg/exec';const CSV_URL='data/patients.csv';
+const ENDPOINT='REPLACE_WITH_YOUR_APPS_SCRIPT_WEB_APP_URL';const CSV_URL='data/patients.csv';
 const LS_KEY_INDEX='cer_current_index',LS_KEY_SUBMITTED='cer_submitted_ids';let patients=[],idx=0,submittedIds={};
 function $(s){return document.querySelector(s)}function $all(s){return[...document.querySelectorAll(s)]}
 function loadLocalState(){const i=localStorage.getItem(LS_KEY_INDEX);idx=i?parseInt(i,10):0;const raw=localStorage.getItem(LS_KEY_SUBMITTED);submittedIds=raw?JSON.parse(raw):{}}
