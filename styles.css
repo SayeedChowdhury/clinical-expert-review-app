@@ -1,0 +1,48 @@
+
+:root{
+  --bg:#0b0f14;
+  --card:#121822;
+  --muted:#0f141c;
+  --text:#e8eef7;
+  --soft:#a8bbd5;
+  --accent:#3aa6ff;
+  --accent-2:#59d8a1;
+  --danger:#f87171;
+  --border:#1f2a3a;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{max-width:1000px;margin:0 auto;padding:16px}
+.site-header,.site-footer{background:#0d1420;border-bottom:1px solid var(--border)}
+.site-header .container,.site-footer .container{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.site-header h1{margin:8px 0;font-size:20px}
+.endpoint-label{font-size:12px;color:var(--soft)}
+.endpoint-label input{width:380px;margin-left:6px}
+.nav{display:flex;align-items:center;gap:16px;margin:16px 0}
+.position{opacity:.8}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.card.muted{background:var(--muted)}
+h2,h3{margin-top:0}
+#patientTable{width:100%;border-collapse:collapse}
+#patientTable th,#patientTable td{border:1px solid var(--border);padding:8px 10px;vertical-align:top}
+#patientTable th{background:#1a2230;text-align:left;width:40%}
+#patientTable td{background:#0d131c}
+.field{margin:14px 0}
+.choices{display:grid;gap:10px;margin-top:6px}
+.btn{background:#1a2230;color:var(--text);border:1px solid var(--border);padding:10px 14px;border-radius:10px;cursor:pointer}
+.btn.small{padding:6px 10px;font-size:12px}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#03243a;font-weight:700}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.actions{display:flex;align-items:center;gap:12px;margin-top:16px}
+.status{margin-top:10px;min-height:20px;font-size:14px}
+.status.ok{color:var(--accent-2)}
+.status.err{color:var(--danger)}
+.right{display:flex;align-items:center;gap:8px}
+input,select{background:#0d131c;border:1px solid var(--border);color:var(--text);padding:8px;border-radius:8px}
+output{display:inline-block;min-width:30px;text-align:center;margin-left:8px}
+label.small{font-size:12px;color:var(--soft)}
